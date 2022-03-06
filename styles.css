@@ -269,3 +269,90 @@ main .container .left .profile {
 .left .notifications-popup small {
   display: block;
 }
+
+/* ==================== Middle ============================== */
+.middle .stories {
+  display: flex;
+  justify-content: space-between;
+  height: 12rem;
+  gap: 0.5rem;
+}
+
+.middle .stories .story {
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.middle .stories .story::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  position: absolute;
+  bottom: 0;
+  position: absolute;
+}
+
+.middle .stories .story .name {
+  z-index: 2;
+}
+
+.middle .stories .story:nth-child(1) {
+  background: url("./image/lion-king-2.webp") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(2) {
+  background: url("./image/tiger-New.jpeg") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(3) {
+  background: url("./image/black-jagual.jpeg") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(4) {
+  background: url("./image/dog2.webp") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(5) {
+  background: url("./image/bull-dog.jpeg") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(6) {
+  background: url("./image/elephant-post.jpeg") no-repeat center center/cover;
+}
+
+.middle .story .profile-photo {
+  width: 2rem;
+  height: 2rem;
+  align-items: start;
+  border: 2px solid var(--color-primary);
+}
+
+/*  ---------- Create Post ------------------ */
+
+.middle .create-post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type="text"] {
+  justify-self: start;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-dark);
+  margin-right: 1rem;
+}
