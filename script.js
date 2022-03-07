@@ -24,18 +24,21 @@ const changeActiveItem = () => {
   });
 };
 
+// for notification bar
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
+    // calling the remove active function
     changeActiveItem();
     // Added class of active
     item.classList.add("active");
     // condition to check if we click the notification button
     if (item.id !== "notifications") {
+      // selected notifications-popup form html files, and set it to display none when the notify isn't click
       document.querySelector(".notifications-popup").style.display = "none";
     } else {
       // if the notify is click display block
       document.querySelector(".notifications-popup").style.display = "block";
-      //   if the notify is click hidden the notify-count
+      // if the notify is click hidden the notify-count
       document.querySelector(
         "#notifications .notification-count"
       ).style.display = "none";
@@ -62,7 +65,9 @@ const searchMessage = () => {
 messageSearch.addEventListener("keyup", searchMessage);
 
 messagesNotification.addEventListener("click", () => {
+  // added boxShadow to massage box
   messages.style.boxShadow = "0 0 1rem var(--color-primary)";
+  // messageNotification display none
   messagesNotification.querySelector(".notification-count").style.display =
     "none";
   setTimeout(() => {
@@ -77,6 +82,7 @@ const openThemeModal = () => {
   themeModal.style.display = "grid";
 };
 
+// close modal function
 const closeThemeModal = (e) => {
   if (e.target.classList.contains("customize-theme")) {
     themeModal.style.display = "none";
@@ -102,6 +108,7 @@ fontSizes.forEach((size) => {
   size.addEventListener("click", () => {
     removeSizeSelector();
     let fontSize;
+    // added active to button
     size.classList.toggle("active");
 
     if (size.classList.contains("font-size-1")) {
